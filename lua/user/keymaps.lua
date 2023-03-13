@@ -26,11 +26,11 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- For Left Hand Explore
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+keymap("n", "<leader>e", ":Lex 20<cr>", opts)
 
 -- Resize with arrows
-keymap("n", "<C-q>", ":resize -2<CR>", opts)
-keymap("n", "<C-w>", ":resize +2<CR>", opts)
+keymap("n", "<C-q>", ":resize -1<CR>", opts)
+keymap("n", "<C-w>", ":resize +1<CR>", opts)
 keymap("n", "<C-a>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-s>", ":vertical resize +2<CR>", opts)
 
