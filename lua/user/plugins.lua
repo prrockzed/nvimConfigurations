@@ -44,23 +44,9 @@ return packer.startup(function(use)
 
  use { "wbthomason/packer.nvim" } -- Have packer manage itself
  use { "nvim-lua/plenary.nvim" } -- Useful lua functions used by lots of plugins
-
-
-
- -- Extra Plugins
- use { "nvim-lua/popup.nvim" }  -- (Was not here originally)An implementation of the Popup Api from vim in neovim
- use { "rstacruz/vim-closer" } -- (Was not here originally)
- -- use {'tpope/vim-dispatch', opt = true, cmd = {'Dispatch', 'Make', 'Focus', 'Start'}}  -- (Was not here originally)
- -- use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'} -- (Was not here originally)
- -- use {'andymass/vim-matchup', event = 'VimEnter'} -- (Was not here originally)
-
-
-
-
-
- --  use { "windwp/nvim-autopairs", commit = "4fc96c8f3df89b6d23e5092d31c866c53a346347" } -- Autopairs, integrates with both cmp and treesitter
- --  use { "numToStr/Comment.nvim", commit = "97a188a98b5a3a6f9b1b850799ac078faa17ab67" }
- --  use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "4d3a68c41a53add8804f471fcc49bb398fe8de08" }
+ use { "windwp/nvim-autopairs" } -- Autopairs, integrates with both cmp and treesitter
+ use { "numToStr/Comment.nvim" } -- Used for comments
+ use { "JoosepAlviste/nvim-ts-context-commentstring" }
  --  use { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" }
  --  use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }
  --  use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }
@@ -72,6 +58,18 @@ return packer.startup(function(use)
  --  use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }
  --  use { "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }
  --	use {"folke/which-key.nvim"}
+
+
+
+
+ -- Extra Plugins
+ use { "nvim-lua/popup.nvim" }  -- (Was not here originally)An implementation of the Popup Api from vim in neovim
+ use { "rstacruz/vim-closer" } -- (Was not here originally)
+ -- use {'tpope/vim-dispatch', opt = true, cmd = {'Dispatch', 'Make', 'Focus', 'Start'}}  -- (Was not here originally)
+ -- use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'} -- (Was not here originally)
+ -- use {'andymass/vim-matchup', event = 'VimEnter'} -- (Was not here originally)
+
+
 
  -- Colorschemes
  use { "folke/tokyonight.nvim"}
@@ -93,31 +91,30 @@ return packer.startup(function(use)
  use { "L3MON4D3/LuaSnip", run = "make install_jsregexp" }
  use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
 
- --	-- LSP
+ -- LSP
  use { "neovim/nvim-lspconfig" } -- enable LSP
  use { "williamboman/mason.nvim" } -- simple to use language server installer
  use { "williamboman/mason-lspconfig.nvim" }
  use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
  --  use "RRethy/vim-illuminate"
 
- --	-- Telescope
- --	use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
+ -- Telescope
+ use { "nvim-telescope/telescope.nvim", tag = '0.1.1' }
 
- --	-- Treesitter
- --	use {
- --		"nvim-treesitter/nvim-treesitter",
- --		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
- --	}
-
+ -- Treesitter
+ use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+ use { "HiPhish/nvim-ts-rainbow2"} -- For rainbow parentheses
+ use { "nvim-treesitter/playground" }
+ 
  --	-- Git
  --	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
 
  --  -- Wakatime
  --  use 'wakatime/vim-wakatime'
 
-	-- Automatically set up your configuration after cloning packer.nvim
-	-- Put this at the end after all plugins
-	if PACKER_BOOTSTRAP then
-		require("packer").sync()
-	end
+ -- Automatically set up your configuration after cloning packer.nvim
+ -- Put this at the end after all plugins
+ if PACKER_BOOTSTRAP then
+  require("packer").sync()
+ end
 end)
