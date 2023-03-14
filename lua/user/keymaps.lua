@@ -25,9 +25,6 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
--- Nvim tree toggle
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-
 -- Resize with arrows
 keymap("n", "<C-q>", ":resize -1<CR>", opts)
 keymap("n", "<C-w>", ":resize +1<CR>", opts)
@@ -42,12 +39,10 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<S-k>", "<Esc>:m .-2<CR>==gi", opts)
 
-
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
-
 
 -- Visual --
 -- Stay in indent mode
@@ -59,14 +54,12 @@ keymap("v", "<S-j>", ":m .+1<CR>==", opts)
 keymap("v", "<S-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
-
 -- Visual Block --
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
 
 -- Terminal --
 -- Better terminal navigation
@@ -75,15 +68,12 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
-
 -- Telescope --
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap(
+	"n",
+	"<leader>f",
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+	opts
+)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
-
-
--- Gitsigns --
-keymap("n", "<leader>p", ":Gitsigns preview_hunk<cr>", opts)
-
--- Null ls formatting --
--- keymap("n", "<leader>t", ":lua vim.lsp.buf.format()<cr>", opts)

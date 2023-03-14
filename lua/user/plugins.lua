@@ -55,7 +55,7 @@ return packer.startup(function(use)
  use { "lewis6991/impatient.nvim" }
  use { "lukas-reineke/indent-blankline.nvim" }
  use { "goolord/alpha-nvim" }
- --	use {"folke/which-key.nvim"}
+ use {"folke/which-key.nvim" }
 
  -- Commenting
  use { "numToStr/Comment.nvim" }
