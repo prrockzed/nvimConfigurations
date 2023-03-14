@@ -84,3 +84,6 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Gitsigns --
 keymap("n", "<leader>p", ":Gitsigns preview_hunk<cr>", opts)
+
+-- Null ls formatting --
+-- keymap("n", "<leader>t", ":lua vim.lsp.buf.format()<cr>", opts)
