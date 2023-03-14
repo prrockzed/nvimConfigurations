@@ -110,7 +110,7 @@ return packer.startup(function(use)
  use { "nvim-treesitter/playground" }
 
  -- Git
- --	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
+ use { "lewis6991/gitsigns.nvim" }
 
  --  -- Wakatime
  --  use 'wakatime/vim-wakatime'
