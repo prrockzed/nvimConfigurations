@@ -55,6 +55,7 @@ return packer.startup(function(use)
 	use({ "goolord/alpha-nvim" })
 	use({ "folke/which-key.nvim" })
 	use({ "edluffy/specs.nvim" }) -- Cursor Navigation
+	use({ "echasnovski/mini.nvim" }) -- Mini animation of Cursor
 
 	-- Commenting
 	use({ "numToStr/Comment.nvim" })
