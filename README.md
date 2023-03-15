@@ -1,3 +1,4 @@
-# nvim Config
+# Neovim Configurations
 
-This is my Neovim Configuration.
+
+Here I put all my neovim configurations which includes a variety of them.
