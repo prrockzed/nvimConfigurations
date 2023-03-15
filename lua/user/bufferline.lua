@@ -5,7 +5,7 @@ end
 
 bufferline.setup({
 	options = {
-		separator_style = { "none", "slant" }, -- | "thick" | "thin" | { 'any', 'any' },
+		separator_style = "padded_slant", -- | "thick" | "thin" | { 'any', 'any' },
 		numbers = "ordinal", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
 		-- numbers = function(opts)
 		-- 	return string.format("%s·%s", opts.raise(opts.id), opts.lower(opts.ordinal))

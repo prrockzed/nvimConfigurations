@@ -93,8 +93,8 @@ local mappings = {
 		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"Find files",
 	},
-	-- ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+  ["v"] = { ":lua require('specs').show_specs({width = 97, winhl = 'Search', delay_ms = 610, inc_ms = 21})<CR>", "Spces" },
 
   F = {
     name = "Find",
