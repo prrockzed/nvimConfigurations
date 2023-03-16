@@ -103,11 +103,14 @@ return packer.startup(function(use)
 	use({ "HiPhish/nvim-ts-rainbow2" }) -- rainbow highlighting
 	use({ "nvim-treesitter/playground" })
 
+	-- AI Autocompletion for neovim
+	use({ "Exafunction/codeium.vim" }) -- codeium
+
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
 
 	-- Wakatime
-	use ({ "wakatime/vim-wakatime" })
+	use({ "wakatime/vim-wakatime" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
