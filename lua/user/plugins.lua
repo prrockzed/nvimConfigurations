@@ -104,6 +104,7 @@ return packer.startup(function(use)
 	use({ "nvim-treesitter/playground" })
 
 	-- AI Autocompletion for neovim
+  use({ "github/copilot.vim" })
 	use({ "Exafunction/codeium.vim" }) -- codeium
 
 	-- Git
