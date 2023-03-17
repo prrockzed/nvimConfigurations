@@ -58,6 +58,7 @@ return packer.startup(function(use)
 	use({ "echasnovski/mini.nvim" }) -- Mini animation of Cursor
 	use({ "mattn/emmet-vim" })
 	use({ "alvan/vim-closetag" })
+	use({ "tpope/vim-fugitive" })
 
 	-- Commenting
 	use({ "numToStr/Comment.nvim" })
