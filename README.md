@@ -1,4 +1,3 @@
 # Neovim Configurations
 
-
-Here I put all my neovim configurations which includes a variety of them.
+Here are all of my Neovim configurations, which encompass a variety of settings and plugins.
