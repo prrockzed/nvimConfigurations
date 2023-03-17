@@ -56,6 +56,8 @@ return packer.startup(function(use)
 	use({ "folke/which-key.nvim" })
 	use({ "edluffy/specs.nvim" }) -- Cursor Navigation
 	use({ "echasnovski/mini.nvim" }) -- Mini animation of Cursor
+	use({ "mattn/emmet-vim" })
+	use({ "alvan/vim-closetag" })
 
 	-- Commenting
 	use({ "numToStr/Comment.nvim" })
@@ -104,7 +106,7 @@ return packer.startup(function(use)
 	use({ "nvim-treesitter/playground" })
 
 	-- AI Autocompletion for neovim
-  use({ "github/copilot.vim" })
+	use({ "github/copilot.vim" })
 	use({ "Exafunction/codeium.vim" }) -- codeium
 
 	-- Git
