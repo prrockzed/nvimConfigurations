@@ -66,7 +66,8 @@ return packer.startup(function(use)
 		end,
 		cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
 	})
-  use({ "ap/vim-css-color"})
+  use({ "ap/vim-css-color" })
+  use({ "vimwiki/vimwiki" })
 
 	-- Commenting
 	use({ "numToStr/Comment.nvim" })

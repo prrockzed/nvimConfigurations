@@ -7,6 +7,6 @@ live_server.setup({
   port = 8080,
   browser_command = "brave-browser", -- Command or executable path
   quiet = false,
-  no_css_inject = true,
+  no_css_inject = false,
   install_path = os.getenv("HOME") .. "/live/",
 })
