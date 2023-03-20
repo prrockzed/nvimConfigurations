@@ -59,6 +59,13 @@ return packer.startup(function(use)
 	use({ "mattn/emmet-vim" })
 	use({ "alvan/vim-closetag" })
 	use({ "tpope/vim-fugitive" })
+	use({
+		"aurum77/live-server.nvim",
+		run = function()
+			require("live_server.util").install()
+		end,
+		cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
+	})
 
 	-- Commenting
 	use({ "numToStr/Comment.nvim" })
