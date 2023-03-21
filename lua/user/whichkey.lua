@@ -96,6 +96,8 @@ local mappings = {
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
   ["v"] = { ":lua require('specs').show_specs({width = 97, winhl = 'Search', delay_ms = 610, inc_ms = 21})<CR>", "Spces" },
 
+	["t"] = { "<cmd>ToggleTerm direction=float<cr>", "Terminal" },
+
   F = {
     name = "Find",
     l = { "<cmd>Telescope live_grep<cr>", "Find Text" },
@@ -180,13 +182,12 @@ local mappings = {
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
 	},
 
-	t = {
-		name = "Terminal",
+	T = {
+		name = "All Terminal",
 		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
 		u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
 		t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
 		p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},

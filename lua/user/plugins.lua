@@ -83,10 +83,11 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim" })
 	use({ "lunarvim/darkplus.nvim" })
-	use({ "lunarvim/colorschemes" })
+	-- use({ "lunarvim/colorschemes" })
 	use({ "rktjmp/lush.nvim" })
 	use({ "metalelf0/jellybeans-nvim" })
 	use({ "EdenEast/nightfox.nvim" }) -- Packer
+  use({ "navarasu/onedark.nvim" })
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
 	use({ "hrsh7th/cmp-buffer" }) -- buffer completions
