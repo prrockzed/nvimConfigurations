@@ -66,8 +66,8 @@ return packer.startup(function(use)
 		end,
 		cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
 	})
-  use({ "ap/vim-css-color" })
-  use({ "vimwiki/vimwiki" })
+	use({ "ap/vim-css-color" })
+	use({ "vimwiki/vimwiki" })
 
 	-- Commenting
 	use({ "numToStr/Comment.nvim" })
@@ -87,7 +87,7 @@ return packer.startup(function(use)
 	use({ "rktjmp/lush.nvim" })
 	use({ "metalelf0/jellybeans-nvim" })
 	use({ "EdenEast/nightfox.nvim" }) -- Packer
-  use({ "navarasu/onedark.nvim" })
+	use({ "navarasu/onedark.nvim" })
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
 	use({ "hrsh7th/cmp-buffer" }) -- buffer completions
@@ -115,6 +115,15 @@ return packer.startup(function(use)
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "HiPhish/nvim-ts-rainbow2" }) -- rainbow highlighting
 	use({ "nvim-treesitter/playground" })
+
+	-- Competitive Programming
+	use({
+		"xeluxee/competitest.nvim",
+		requires = "MunifTanjim/nui.nvim",
+		config = function()
+			require("competitest").setup()
+		end,
+	})
 
 	-- AI Autocompletion for neovim
 	use({ "github/copilot.vim" })
