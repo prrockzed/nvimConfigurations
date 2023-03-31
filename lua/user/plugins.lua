@@ -65,6 +65,19 @@ return packer.startup(function(use)
 	use({ "lalitmee/browse.nvim" })
 	use({ "RishabhRD/nvim-cheat.sh" })
 	use({ "RishabhRD/popfix" })
+	use({
+		"jackMort/ChatGPT.nvim",
+		config = function()
+			require("chatgpt").setup({
+				-- optional configuration
+			})
+		end,
+		requires = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+	})
 
 	-- Commenting
 	use({ "numToStr/Comment.nvim" })
