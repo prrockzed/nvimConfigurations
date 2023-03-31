@@ -24,3 +24,4 @@ require("mini.animate").setup()
 require("user.liveserver")
 require("user.onedark")
 require('competitest').setup() -- to use default configurations
+require("user.browse")
