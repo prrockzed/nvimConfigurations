@@ -63,6 +63,8 @@ return packer.startup(function(use)
 	use({ "ap/vim-css-color" })
 	use({ "vimwiki/vimwiki" })
 	use({ "lalitmee/browse.nvim" })
+	use({ "RishabhRD/nvim-cheat.sh" })
+	use({ "RishabhRD/popfix" })
 
 	-- Commenting
 	use({ "numToStr/Comment.nvim" })
