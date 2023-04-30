@@ -21,6 +21,11 @@ local settings = {
 	},
 	log_level = vim.log.levels.INFO,
 	max_concurrent_installers = 4,
+  python = {
+    analysis = {
+      { diagnosticMode = "off", typeCheckingMode = "off" },
+    }
+  }
 }
 
 require("mason").setup(settings)
