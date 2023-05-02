@@ -94,16 +94,27 @@ local mappings = {
 		"Find files",
 	},
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-  ["v"] = { ":lua require('specs').show_specs({width = 97, winhl = 'Search', delay_ms = 610, inc_ms = 21})<CR>", "Spces" },
+	["v"] = {
+		":lua require('specs').show_specs({width = 97, winhl = 'Search', delay_ms = 610, inc_ms = 21})<CR>",
+		"Spces",
+	},
 
 	["t"] = { "<cmd>ToggleTerm direction=float<cr>", "Terminal" },
-
-  F = {
-    name = "Find",
-    l = { "<cmd>Telescope live_grep<cr>", "Find Text" },
-    o = { "<cmd>Telescope oldfiles<cr>", "Old Files" },
-    k = { "<cmd>Telescope filetypes<cr>", "File Types" },
-  },
+	r = {
+		name = "CompetiTest",
+		r = { "<cmd>CompetiTestRun<cr>", "Run" },
+		a = { "<cmd>CompetiTestAdd<cr>", "Add" },
+		e = { "<cmd>CompetiTestEdit<cr>", "Edit" },
+		d = { "<cmd>CompetiTestDelete<cr>", "Delete" },
+		c = { "<cmd>CompetiTestReceive<cr>", "Download" },
+		n = { "<cmd>CompetiTestRunNC<cr>", "RunNC" },
+	},
+	F = {
+		name = "Find",
+		l = { "<cmd>Telescope live_grep<cr>", "Find Text" },
+		o = { "<cmd>Telescope oldfiles<cr>", "Old Files" },
+		k = { "<cmd>Telescope filetypes<cr>", "File Types" },
+	},
 
 	p = {
 		name = "Packer",

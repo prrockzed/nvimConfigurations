@@ -25,3 +25,4 @@ require("user.liveserver")
 require("user.onedark")
 require("competitest").setup() -- to use default configurations
 require("user.browse")
+require("user.luasnip-config")

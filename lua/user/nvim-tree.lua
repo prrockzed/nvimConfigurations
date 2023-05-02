@@ -43,7 +43,7 @@ nvim_tree.setup({
 	},
 	view = {
 		side = "right",
-		width = 30,
+		width = 40,
 		number = true,
 		relativenumber = true,
 	},
