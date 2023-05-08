@@ -9,8 +9,8 @@ local keymap = vim.api.nvim_set_keymap
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.g.user_emmet_mode='n'
-vim.g.user_emmet_leader_key=','
+vim.g.user_emmet_mode = "n"
+vim.g.user_emmet_leader_key = ","
 
 -- Modes
 --   normal_mode = "n",
@@ -41,7 +41,6 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<S-k>", "<Esc>:m .-2<CR>==gi", opts)
 
-
 -- Insert --
 -- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
@@ -56,6 +55,9 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<S-j>", ":m .+1<CR>==", opts)
 keymap("v", "<S-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
+
+-- Replacing
+keymap("v", "<C-r>", '"hy:%s/<C-r>h//gc<left><left><left>', opts)
 
 -- Visual Block --
 -- Move text up and down
@@ -74,9 +76,9 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Telescope --
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 -- keymap(
-	-- "n",
-	-- "<leader>f",
-	-- "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+-- "n",
+-- "<leader>f",
+-- "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
 -- 	opts
 -- )
 -- keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
