@@ -70,25 +70,22 @@ end --}}}
 
 -- Start Refactoring --
 
-local snip = s("snip", {
+local compro = s("compro", {
 	t({ "#include <algorithm>", "" }),
 	t({ "#include <iostream>", "" }),
+	t({ "#include <map>", "" }),
 	t({ "#include <math.h>", "" }),
+	t({ "#include <set>", "" }),
 	t({ "#include <string>", "" }),
 	t({ "#include <tuple>", "" }),
+	t({ "#include <unordered_map>", "" }),
+	t({ "#include <unordered_set>", "" }),
 	t({ "#include <utility>", "" }),
 	t({ "#include <vector>", "" }),
-	t({ "#include <set>", "", "" }),
-	t({ "#define fastio                                                                 \\", "" }),
-	t({ "  ios::sync_with_stdio(0);                                                     \\", "" }),
-	t({ "  cin.tie(0);                                                                  \\", "" }),
-	t({ "  cout.tie(0);", "" }),
 	t({ "#define ll long long", "" }),
 	t({ "#define li long int", "" }),
 	t({ "#define ld long double", "" }),
 	t({ "#define vi vector<int>", "" }),
-	t({ "#define vii vector<int, int>", "" }),
-	t({ "#define vis vector<int, string>", "" }),
 	t({ "#define PB(a) push_back(a)", "" }),
 	t({ "#define MP(a, b) make_pair(a, b)", "" }),
 	t({ "#define PR pair<int, int>", "" }),
@@ -103,7 +100,9 @@ local snip = s("snip", {
 	i(1, "// Your Code Here"),
 	t({ "", "}", "", "" }),
 	t({ "int main() {", "" }),
-	t({ "  fastio;", "" }),
+	t({ "  ios::sync_with_stdio(0);", "" }),
+	t({ "  cin.tie(0);", "" }),
+	t({ "  cout.tie(0);", "", "" }),
 	t({ "  int t = 1;", "" }),
 	t({ "  cin >> t;", "" }),
 	t({ "  while (t--) {", "" }),
@@ -112,7 +111,40 @@ local snip = s("snip", {
 	t({ "  return 0;", "" }),
 	t("}"),
 })
-table.insert(snippets, snip)
+table.insert(snippets, compro)
+
+local nocompro = s("nocompro", {
+	t({ "#include <algorithm>", "" }),
+	t({ "#include <iostream>", "" }),
+	t({ "#include <map>", "" }),
+	t({ "#include <math.h>", "" }),
+	t({ "#include <set>", "" }),
+	t({ "#include <string>", "" }),
+	t({ "#include <tuple>", "" }),
+	t({ "#include <unordered_map>", "" }),
+	t({ "#include <unordered_set>", "" }),
+	t({ "#include <utility>", "" }),
+	t({ "#include <vector>", "" }),
+	t({ "#define ll long long", "" }),
+	t({ "#define li long int", "" }),
+	t({ "#define ld long double", "" }),
+	t({ "#define vi vector<int>", "" }),
+	t({ "#define PB(a) push_back(a)", "" }),
+	t({ "#define MP(a, b) make_pair(a, b)", "" }),
+	t({ "#define PR pair<int, int>", "" }),
+	t({ "#define F first", "" }),
+	t({ "#define S second", "" }),
+	t({ "#define loop(i, n) for (int i = 0; i < n; i++)", "" }),
+	t({ "#define loopr(i, a, n) for (int i = a; i >= n; i--)", "" }),
+	t({ "#define loops(i, a, n, step) for (int i = a; i < n; i += step)", "" }),
+	t({ "#define looprs(i, a, n, step) for (int i = a; i >= n; i -= step)", "", "" }),
+	t({ "using namespace std;", "", "" }),
+	t({ "int main() {", "", "  " }),
+	i(1, "// Your Code Here"),
+	t({ "", "", "  return 0;", "" }),
+	t("}"),
+})
+table.insert(snippets, nocompro)
 
 -- End Refactoring --
 
