@@ -45,7 +45,7 @@ nvim_tree.setup({
 		side = "right",
 		width = 40,
 		number = true,
-		relativenumber = true,
+		relativenumber = false,
 	},
 	renderer = {
 		highlight_git = true,
