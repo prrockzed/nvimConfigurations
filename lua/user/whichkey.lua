@@ -78,14 +78,20 @@ local opts = {
 	nowait = true, -- use `nowait` when creating keymaps
 }
 
+local file = vim.fn.expand("%:p")
+
 local mappings = {
+	-- ["n"] = {
+	-- 	"<cmd>ToggleTerm size=15 direction=horizontal<cr>run " .. file .. " <cr>",
+	-- 	"Run Program",
+	-- },
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
 	["b"] = {
 		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"Buffers",
 	},
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	["d"] = { "<cmd>w!<CR>", "Save" },
+	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
 	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
@@ -123,6 +129,20 @@ local mappings = {
 		s = { "<cmd>PackerSync<cr>", "Sync" },
 		S = { "<cmd>PackerStatus<cr>", "Status" },
 		u = { "<cmd>PackerUpdate<cr>", "Update" },
+	},
+
+	n = {
+		name = "Run!!",
+		n = { "<cmd>RunCode<cr>", "Code" },
+		f = { "<cmd>RunFile<cr>", "File" },
+		p = { "<cmd>RunProject<cr>", "Project" },
+		c = { "<cmd>RunClose<cr>", "Close" },
+		i = { "<cmd>CRFiletype<cr>", "Open JSON with supported files" },
+		r = { "<cmd>CRProjects<cr>", "Open JSON with list of projects" },
+		a = {
+			"<cmd>ToggleTerm direction=float<cr>run " .. file .. " <cr>",
+			"Run Program Cmd",
+		},
 	},
 
 	g = {

@@ -71,17 +71,7 @@ end --}}}
 -- Start Refactoring --
 
 local compro = s("compro", {
-	t({ "#include <algorithm>", "" }),
-	t({ "#include <iostream>", "" }),
-	t({ "#include <map>", "" }),
-	t({ "#include <math.h>", "" }),
-	t({ "#include <set>", "" }),
-	t({ "#include <string>", "" }),
-	t({ "#include <tuple>", "" }),
-	t({ "#include <unordered_map>", "" }),
-	t({ "#include <unordered_set>", "" }),
-	t({ "#include <utility>", "" }),
-	t({ "#include <vector>", "" }),
+	t({ "#include <bits/stdc++.h>", "" }),
 	t({ "#define ll long long", "" }),
 	t({ "#define li long int", "" }),
 	t({ "#define ld long double", "" }),
@@ -114,17 +104,7 @@ local compro = s("compro", {
 table.insert(snippets, compro)
 
 local nocompro = s("nocompro", {
-	t({ "#include <algorithm>", "" }),
-	t({ "#include <iostream>", "" }),
-	t({ "#include <map>", "" }),
-	t({ "#include <math.h>", "" }),
-	t({ "#include <set>", "" }),
-	t({ "#include <string>", "" }),
-	t({ "#include <tuple>", "" }),
-	t({ "#include <unordered_map>", "" }),
-	t({ "#include <unordered_set>", "" }),
-	t({ "#include <utility>", "" }),
-	t({ "#include <vector>", "" }),
+	t({ "#include <bits/stdc++.h>", "" }),
 	t({ "#define ll long long", "" }),
 	t({ "#define li long int", "" }),
 	t({ "#define ld long double", "" }),

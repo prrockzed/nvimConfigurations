@@ -12,7 +12,7 @@ configs.setup({
     additional_vim_regex_highlighting = true,
   },
   autopairs = {
-  	enable = true,
+  	enable = false,
   },
   indent = { enable = true, disable = { "yaml" } },
   rainbow = {

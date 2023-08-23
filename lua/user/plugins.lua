@@ -59,7 +59,13 @@ return packer.startup(function(use)
 	use({ "mattn/emmet-vim" })
 	use({ "alvan/vim-closetag" })
 	use({ "tpope/vim-fugitive" })
-	use({ "manzeloth/live-server" })
+	use({
+		"aurum77/live-server.nvim",
+		run = function()
+			require("live_server.util").install()
+		end,
+		cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
+	})
 	use({ "ap/vim-css-color" })
 	-- use({ "vimwiki/vimwiki" })
 	use({ "lalitmee/browse.nvim" })
@@ -138,6 +144,10 @@ return packer.startup(function(use)
 			require("competitest").setup()
 		end,
 	})
+
+	-- Run a task
+	use({ "CRAG666/betterTerm.nvim" })
+	use({ "CRAG666/code_runner.nvim" })
 
 	-- AI Autocompletion for neovim
 	use({ "github/copilot.vim" })
